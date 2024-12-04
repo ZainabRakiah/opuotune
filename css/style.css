@@ -1,0 +1,225 @@
+/* General Reset */
+body, h1, h2, p, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Modern, clean font */
+    background: url('../assets/backdrop.jpg') no-repeat center center fixed;
+    background-size: cover; /* Ensure full-screen background scaling */
+    color: #333;
+}
+
+/* Navigation Bar */
+.navbar {
+    background: rgba(0, 0, 0, 0.5); /* Dark semi-transparent background */
+    color: #fff;
+    padding: 1rem;
+    position: fixed; /* Sticky navbar */
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar nav a {
+    color: #ffffff;
+    margin-left: 1.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: #61f2ff; /* Trendy coral hover color */
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+
+/* Dialog Box */
+.dialog-box {
+    background: rgba(255, 255, 255, 0.85); /* Frosted glass effect */
+    padding: 2rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 16px; /* Softer corners for a modern feel */
+    text-align: center;
+    width: 90%;
+    max-width: max-content;
+    backdrop-filter: blur(8px); /* Adds a smooth glassy effect */
+    animation: fadeIn 1s ease-in-out; /* Subtle entrance animation */
+}
+
+.dialog-box h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #1a73e8; /* Vibrant blue color for headers */
+    font-weight: 700;
+}
+
+.dialog-box input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.dialog-box input:focus {
+    border-color: #1a73e8; /* Highlighted border on focus */
+    outline: none;
+    box-shadow: 0 0 8px rgba(26, 115, 232, 0.4);
+}
+
+.dialog-box button {
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 24px; /* Rounded button */
+    background: linear-gradient(45deg, #61c5ff, #56d8ff); /* Gradient background */
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dialog-box button:hover {
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Hover shadow */
+}
+
+.dialog-box button:active {
+    transform: translateY(0); /* Return to normal on click */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Result Card Container */
+.result-container {
+    color:black;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 2rem auto; /* Center container horizontally */
+    width: 90%; /* Take up 90% of the available width */
+    max-width: 1000px; /* Set a reasonable maximum width for readability */
+    overflow-y: auto;
+    max-height: 40vh; /* Increased height for better visibility of content */
+    text-align: left;
+}
+
+/* Individual Result Card */
+.result-card {
+    background: rgba(255, 255, 255, 0.9); /* Matches frosted glass effect */
+    border-radius: 12px;
+    padding: 2rem; /* Increased padding for better spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Ensure cards take full width of the container */
+}
+
+.result-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Title Styling */
+.result-title {
+    font-size: 1.6rem; /* Slightly larger title font */
+    color: #1a73e8;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+}
+
+/* Section Styling */
+.result-section {
+    margin-top: 1.5rem; /* Increased spacing between sections */
+}
+
+/* List Styling */
+.result-list {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin: 0.5rem 0;
+    color: black;
+}
+
+/* Links Styling */
+.result-link, .resource-link {
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    word-wrap: break-word; /* Break long URLs to prevent overflow */
+}
+
+.result-link:hover, .resource-link:hover {
+    color: #61c5ff;
+}
+
+/* Loader Overlay */
+#loader-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8); /* Light overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Loader Container */
+.loader-container {
+    text-align: center;
+}
+
+/* Loader Image */
+.loader-image {
+    width: max-content;
+    height: max-content;
+}
+
+/* Footer */
+.footer {
+    background: rgba(0, 0, 0, 0.3); /* Darker footer */
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
